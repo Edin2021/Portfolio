@@ -1,0 +1,2 @@
+- Font Title: Montserrat
+- Colors: background: #424656, linear-gradient: from #0688FF to #8F6EFF, text: #FFFFFF
