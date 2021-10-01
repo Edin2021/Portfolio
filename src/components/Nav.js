@@ -8,15 +8,10 @@ import { useEffect } from "react/cjs/react.development";
 
 function Nav({ position }) {
   const [openMenu, setMenuOpen] = useState(false);
-  const [currPath, setCurrPath] = useState("");
-
-  // useEffect(() => {
-  //   setCurrPath(window.location.pathname.slice(1));
-  // }, []);
 
   return (
     <>
-      {/* <nav className={`${position} ${openMenu && "active"}`}>
+      <nav className={`${position} ${openMenu && "active"}`}>
         {position === "header-nav" && (
           <button
             type="button"
@@ -30,19 +25,15 @@ function Nav({ position }) {
         <Link to="/" onClick={() => setMenuOpen(false)}>
           Home
         </Link>
-        {currPath !== "projects" && (
-          <>
-            <a href="#selectedProjects" onClick={() => setMenuOpen(false)}>
-              Projects
-            </a>
-            <a href="#about" onClick={() => setMenuOpen(false)}>
-              About
-            </a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>
-              Contact
-            </a>
-          </>
-        )}
+        <a href="#selectedProjects" onClick={() => setMenuOpen(false)}>
+          Projects
+        </a>
+        <a href="#about" onClick={() => setMenuOpen(false)}>
+          About
+        </a>
+        <a href="#contact" onClick={() => setMenuOpen(false)}>
+          Contact
+        </a>
         <ResumeButton position="inside" />
       </nav>
       {position && (
@@ -54,7 +45,7 @@ function Nav({ position }) {
           <TiThMenu />
           <span className="visually-hidden">Menu</span>
         </button>
-      )} */}
+      )}
     </>
   );
 }
