@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import tempImage from "../images/temp-project-image.png";
+import tempProjectImage from "../images/project-images/beach-resort.png";
 import { FaGithub } from "react-icons/fa";
 import guyThinking from "../images/illustarions/guy-thinking.png";
 import longArrow from "../images/illustarions/logn-arrow.png";
@@ -15,21 +15,21 @@ function SelectedProjects() {
       <div className="projects">
         <article className="project">
           <div className="image">
-            <img src={tempImage} alt="" />
+            <img src={tempProjectImage} alt="" />
           </div>
           <div className="details">
             <h4 className="tech-used">
-              <span>Sass/Javascript/ReactJS</span>
-              <a href="/temp" className="repo-link">
+              <span>Css/Javascript/ReactJS</span>
+              <a href="https://github.com/Edin2021/react-beach-resort.git" target="_blank" rel="noreferrer" className="repo-link">
                 <FaGithub />
                 <span className="visually-hidden">Github</span>
               </a>
             </h4>
-            <h3 className="name">audiophile e-commerce</h3>
+            <h3 className="name">beach resort</h3>
             <p className="info">
-              This website contains multiple pages, a cart and more.
+              This website contains a home page, rooms page and a room details page.
             </p>
-            <a className="demo-link" href="/temp">
+            <a className="demo-link" href="https://9e582d10.react-beach-resort.pages.dev/" target="_blank" rel="noreferrer">
               Live Demo <img src={demoLinkIcon} alt="demo link icon" />
             </a>
           </div>

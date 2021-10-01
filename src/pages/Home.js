@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from "../components/Header";
 import SelectedProjects from "../components/SelectedProjects";
 import Technologies from "../components/Technologies";
