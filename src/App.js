@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -10,12 +11,9 @@ function App() {
       <Fragment>
         <ScrollToTop />
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/projects">
-            <Projects />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/projects" component={Projects} />
+          <Route path="*" component={Error} />
         </Switch>
       </Fragment>
     </Router>
