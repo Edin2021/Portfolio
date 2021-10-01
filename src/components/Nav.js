@@ -10,9 +10,9 @@ function Nav({ position }) {
   const [openMenu, setMenuOpen] = useState(false);
   const [currPath, setCurrPath] = useState("");
 
-  useEffect(() => {
-    setCurrPath(window.location.pathname.slice(1));
-  }, []);
+  // useEffect(() => {
+  //   setCurrPath(window.location.pathname.slice(1));
+  // }, []);
 
   return (
     <>
