@@ -14,11 +14,9 @@ function Nav({ position }) {
     setCurrPath(window.location.pathname.slice(1));
   }, []);
 
-  console.log(currPath);
-
   return (
     <>
-      <nav className={`${position} ${openMenu && "active"}`}>
+      {/* <nav className={`${position} ${openMenu && "active"}`}>
         {position === "header-nav" && (
           <button
             type="button"
@@ -56,7 +54,7 @@ function Nav({ position }) {
           <TiThMenu />
           <span className="visually-hidden">Menu</span>
         </button>
-      )}
+      )} */}
     </>
   );
 }
