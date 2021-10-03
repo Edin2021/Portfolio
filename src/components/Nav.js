@@ -1,18 +1,18 @@
 // import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { TiThMenu } from "react-icons/ti";
-import { IoMdClose } from "react-icons/io";
+import { IoMdClose, IoMdArrowRoundBack } from "react-icons/io";
 import ResumeButton from "./ResumeButton";
 import { Link } from "react-router-dom";
 
 function Nav({ position }) {
   const [openMenu, setMenuOpen] = useState(false);
-  const [currPage, setCurrPage] = useState("")
+  const [currPage, setCurrPage] = useState("");
 
   useEffect(() => {
     const currPath = window.location.href.split("/").pop();
-    setCurrPage(currPath)
-  }, [])
+    setCurrPage(currPath);
+  }, []);
 
   return (
     <>
@@ -27,21 +27,30 @@ function Nav({ position }) {
             <span className="visually-hidden">close menu button</span>
           </button>
         )}
-        <Link to="/" onClick={() => setMenuOpen(false)}>
-          Home
-        </Link>
 
-        {currPage !== "projects" && <>
-        <a href="#selectedProjects" onClick={() => setMenuOpen(false)}>
-          Projects
-        </a>
-        <a href="#about" onClick={() => setMenuOpen(false)}>
-          About
-        </a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>
-          Contact
-        </a>
-        </>}
+        {currPage !== "projects" ? (
+          <>
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
+            <a href="#selectedProjects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+          </>
+        ) : (
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            <span aria-hidden="true">
+              <IoMdArrowRoundBack />
+            </span>{" "}
+            Back home
+          </Link>
+        )}
 
         <ResumeButton position="inside" />
       </nav>

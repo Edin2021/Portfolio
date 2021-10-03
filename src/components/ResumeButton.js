@@ -14,7 +14,10 @@ function ResumeButton({ position }) {
     <div className={`resume ${position}`}>
       <button type="button">
         <a href={resume} download="edinsikira">
-          Resume <FaFileDownload />
+          Resume{" "}
+          <span>
+            <FaFileDownload />
+          </span>
         </a>
       </button>
       <select className="language" onChange={handleLanguage}>
