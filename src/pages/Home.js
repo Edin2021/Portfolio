@@ -6,7 +6,6 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 import Hero from "../components/Hero";
-import { useGlobalContext } from "../context";
 
 function Home() {
   return (

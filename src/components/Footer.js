@@ -13,10 +13,12 @@ function Footer() {
             <h2>Contact Info</h2>
             <ul>
               <li>
-                <FiMail /> edinsikira5@gmail.com
+                <span className="visually-hidden">my email</span>
+                <FiMail aria-hidden="true" /> edinsikira5@gmail.com
               </li>
               <li>
-                <FiPhone /> 0603294057
+                <span className="visually-hidden">my phone number</span>
+                <FiPhone aria-hidden="true" /> 0603294057
               </li>
             </ul>
           </article>
@@ -24,7 +26,7 @@ function Footer() {
         </div>
       </div>
       <span className="copyright">
-        <BiCopyright /> Copyright 2021
+        <BiCopyright aria-hidden="true" /> Copyright 2021
       </span>
       <img src={footerImage} alt="footer wave" />
     </footer>
