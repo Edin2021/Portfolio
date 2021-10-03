@@ -28,7 +28,7 @@ function Contact() {
         onSubmit={handleSubmit(onSubmit)}
         className="contact-form"
         noValidate
-        action="https://formsubmit.co/edinsikira5@gmail.com"
+        action="https://formsubmit.co/el/fegabi"
         method="POST"
       >
         <label htmlFor="name" className={`${errors.name && "active"}`}>
