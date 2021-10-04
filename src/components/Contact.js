@@ -56,10 +56,6 @@ function Contact() {
     }
   }, [isSent]);
 
-  useEffect(() => {
-    console.log("input");
-  }, [register("name")]);
-
   return (
     <section className="contact">
       <h2>
