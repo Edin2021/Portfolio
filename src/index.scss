@@ -517,10 +517,18 @@ section {
         box-shadow: 0 0 5px $clr-red-light;
       }
     }
+    &[for="name"],
+    &[for="email"] {
+      max-width: 400px;
+    }
+    &[for="message"] {
+      max-width: 800px;
+    }
   }
 
   input,
   textarea {
+    width: 100%;
     outline: none;
     border: 1px solid $clr-text;
     color: $clr-text;
@@ -534,11 +542,7 @@ section {
       box-shadow: 0 0 5px $clr-accent-1;
     }
   }
-  input {
-    max-width: 400px;
-  }
   textarea {
-    max-width: 800px;
     min-height: 200px;
     resize: none;
     line-height: 160%;
@@ -910,8 +914,11 @@ footer {
   }
 
   .contact-form {
-    input {
-      max-width: 100%;
+    label {
+      &[for="name"],
+      &[for="email"] {
+        max-width: 100%;
+      }
     }
     button {
       width: 100%;
