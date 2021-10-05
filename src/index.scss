@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 @mixin flexCenter($direction) {
   display: flex;
@@ -9,7 +6,7 @@
   align-items: center;
   flex-direction: $direction;
 }
-
+// color variablers
 $clr-primary: #424656;
 $clr-accent-1: #0688ff;
 $clr-accent-2: #8f6eff;
@@ -18,20 +15,25 @@ $clr-text: #787878;
 $clr-red-light: #ff8d8d;
 $clr-red-dark: #751313;
 $clr-green-light: #57b894;
+
+// other variables
 $pageWidth: clamp(280px, 90%, 1200px);
 $heroHeading: 2.5rem;
 $sectionHeading: 1.75rem;
 $radius: 0.4rem;
 
 *,
-::before,
+*::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
   font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
