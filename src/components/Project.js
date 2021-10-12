@@ -11,24 +11,14 @@ function Project({ project }) {
       <div className="details">
         <h4 className="tech-used">
           <span>{techUsed}</span>
-          <a
-            href={`https://github.com/Edin2021/${repo}.git`}
-            target="_blank"
-            rel="noreferrer"
-            className="repo-link"
-          >
+          <a href={repo} target="_blank" rel="noreferrer" className="repo-link">
             <FaGithub />
             <span className="visually-hidden">Github</span>
           </a>
         </h4>
         <h3 className="name">{name}</h3>
         <p className="info">{info}</p>
-        <a
-          className="demo-link"
-          href={`https://9e582d10.${demo}.pages.dev/`}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a className="demo-link" href={demo} target="_blank" rel="noreferrer">
           Live Demo <img src={demoLinkIcon} alt="demo link icon" />
         </a>
       </div>
