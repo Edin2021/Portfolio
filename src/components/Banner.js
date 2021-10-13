@@ -5,7 +5,7 @@ function Banner() {
     <section className="banner">
       <h1>
         <span>Hello There.</span>
-        <p>I am Edin Sikira, a self-tought front end developer.</p>
+        <p>I am Edin Sikira, a self-taught front end developer.</p>
       </h1>
       <div className="image">
         <img src={bannerImage} alt="banner illustration" />

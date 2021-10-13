@@ -1,5 +1,5 @@
 import resumeEN from "../resume/resumeEN.pdf";
-import resumeBH from "../resume/resumeBH.pdf";
+import resumeBA from "../resume/resumeBA.pdf";
 import { useState } from "react";
 import { FaFileDownload } from "react-icons/fa";
 
@@ -8,7 +8,7 @@ function ResumeButton({ position }) {
 
   const handleLanguage = (e) => {
     if (e.target.value === "EN") setResume(resumeEN);
-    else setResume(resumeBH);
+    else setResume(resumeBA);
   };
   return (
     <div className={`resume ${position}`}>
@@ -22,7 +22,7 @@ function ResumeButton({ position }) {
       </button>
       <select className="language" onChange={handleLanguage}>
         <option value="EN">EN</option>
-        <option value="BH">BA</option>
+        <option value="BA">BA</option>
       </select>
     </div>
   );
