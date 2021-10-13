@@ -1,4 +1,4 @@
 # Personal Portoflio
-This is my personal portfolio project which I use to display other projects and the skill set that I currently have with the urge to learn more in this career path.
+This is my personal portfolio project, which I use to display other projects and the skill set that I currently have with the urge to learn more in this career path.
 
-## [Portfolio Link](https://portfolio-1-86d.pages.dev/)
+## [Portfolio Link](https://8a6f35c5.edinsikira.pages.dev/)
