@@ -22,7 +22,7 @@ function ResumeButton({ position }) {
       </button>
       <select className="language" onChange={handleLanguage}>
         <option value="EN">EN</option>
-        <option value="BH">BH</option>
+        <option value="BH">BA</option>
       </select>
     </div>
   );
