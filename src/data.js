@@ -8,7 +8,7 @@ const projects = [
     name: "audiophile e-commerce",
     info: "This website contains a checkout page with form validation, a cart and more.",
     repo: "https://github.com/Edin2021/audiophile-ecommerce",
-    demo: "https://364214fa.audiophile-ecommerce.pages.dev/",
+    demo: "https://audiophile-ecommerce.pages.dev/",
     selected: true,
   },
 ];
