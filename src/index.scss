@@ -90,19 +90,24 @@ header {
   position: absolute;
   top: 0;
   z-index: 10;
-  &.sticky {
-    position: fixed;
-    background-color: white;
-    box-shadow: 0 0 5px $clr-primary;
-  }
   .header-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: $pageWidth;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
+    padding-top: 2rem;
     margin: 0 auto;
   }
+  &.sticky {
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 0 5px $clr-primary;
+    .header-center {
+      padding-top: 1rem;
+    }
+  }
+
   .logo {
     width: 4rem;
   }
@@ -149,10 +154,12 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 55vh;
-  margin-top: 4rem;
+  height: max-content;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   // title
-  h1 > span {
+  span {
     font-size: 4rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -162,7 +169,7 @@ main {
     color: transparent;
   }
   // subtitle
-  h1 > p {
+  p {
     color: $clr-text;
     margin-top: 2rem;
     width: 25ch;
@@ -413,36 +420,31 @@ section {
 }
 
 .technologies {
-  .logos {
+  .logos-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 12.5rem;
-    margin-bottom: 5rem;
-    // logo row wrapper
-    > div {
+    margin: 5rem 0;
+    margin-bottom: 0;
+    .row-1,
+    .row-2 {
       display: flex;
-      // logo wrapper
-      > div {
-        display: grid;
-        place-items: center;
-        width: 15rem;
-      }
     }
-    // css logo
-    > div:first-of-type {
-      > div:nth-child(2) {
-        transform: translateY(-50%);
-      }
+  }
+  .logo {
+    flex: 1;
+    max-height: 175px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 }
 
+.technologies p,
 .about p {
   font-size: 1.25rem;
   line-height: 170%;
-  max-width: 75ch;
+  max-width: 70ch;
   color: $clr-text;
   margin: 5rem 0;
 }
@@ -660,16 +662,12 @@ footer {
 }
 
 @media (max-width: 1160px) {
-  .banner h1 > span {
+  .banner span {
     font-size: 3.5rem;
   }
 
   .projects + .section-image a {
     right: 16vw;
-  }
-
-  .technologies .logos > div > div {
-    width: 15rem;
   }
 
   .contact {
@@ -697,7 +695,11 @@ footer {
 @media (max-width: 992px) {
   header {
     .header-center {
-      padding: 1rem 0;
+      padding: 0.5rem 0;
+      padding-top: 1.5rem;
+    }
+    &.sticky .header-center {
+      padding-top: 0.5rem;
     }
     .menu-btn {
       display: flex;
@@ -715,9 +717,9 @@ footer {
     flex-direction: column;
     h1 {
       margin-bottom: 2rem;
-    }
-    h1 > span {
-      font-size: 4.5rem;
+      span {
+        font-size: 4.5rem;
+      }
     }
   }
   nav a {
@@ -907,10 +909,15 @@ footer {
     }
   }
 
-  .technologies .logos > div > div {
-    width: 12.5rem;
-    > img {
-      width: 100%;
+  .technologies {
+    .logos-wrapper {
+      flex-direction: column;
+      .row-2 {
+        margin: 0 auto;
+        .logo {
+          max-width: 200px;
+        }
+      }
     }
   }
 
@@ -942,6 +949,7 @@ footer {
 
   header > .header-center {
     padding: 0.5rem 0;
+    padding-top: 1rem;
   }
 
   .banner h1 {
@@ -950,7 +958,8 @@ footer {
       font-size: 13vw;
     }
     p {
-      width: 100%;
+      font-size: 4.5vw;
+      margin-top: 1rem;
     }
   }
 
@@ -972,8 +981,8 @@ footer {
     font-size: 1.5rem;
   }
 
-  .technologies .logos > div > div {
-    width: 7rem;
+  .technologies .logos-wrapper .row-2 .logo {
+    max-width: 32.5vw;
   }
 }
 
@@ -996,12 +1005,6 @@ footer {
     }
   }
 
-  .technologies .logos > div > div {
-    width: 6rem;
-    > img {
-      width: 100%;
-    }
-  }
   .contact-form label {
     font-size: 1.25rem;
   }
