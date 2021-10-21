@@ -305,9 +305,12 @@ section {
     box-shadow: 0 0 5px $clr-primary;
     border-radius: $radius;
     overflow: hidden;
-
+    display: flex;
+    flex-direction: column;
     .image {
+      min-height: 300px;
       height: 300px;
+      flex: 1;
       & > img {
         width: 100%;
         height: 100%;
@@ -317,7 +320,10 @@ section {
 
     .details {
       padding: 2rem;
-
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      max-height: max-content;
       .tech-used {
         display: flex;
         justify-content: space-between;
@@ -325,6 +331,7 @@ section {
         color: $clr-text;
         font-size: 1.15rem;
         font-weight: normal;
+        max-width: 100%;
       }
 
       .name {
@@ -349,6 +356,8 @@ section {
         color: $clr-accent-1;
         line-height: 100%;
         transition: opacity 0.3s ease;
+        margin-bottom: 0;
+        margin-top: auto;
         &:hover {
           opacity: 0.7;
         }
