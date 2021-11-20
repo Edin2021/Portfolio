@@ -1,5 +1,6 @@
 import audiophileImage from "./images/project-images/audiophile.png";
 import superchatImage from "./images/project-images/superchat.png";
+import trillowRealEstateImage from "./images/project-images/trillow.png";
 
 const projects = [
   {
@@ -21,6 +22,16 @@ const projects = [
     repo: "https://github.com/Edin2021/superchat",
     demo: "https://superchat.pages.dev/chat",
     selected: true,
+  },
+  {
+    id: "3",
+    image: trillowRealEstateImage,
+    techUsed: "Sass / Javascript / ReacjJS / API",
+    name: "trillow real estate",
+    info: "Users can search for homes and rentals based on the state and city, and other parameters, view individual listings, and more.",
+    repo: "https://github.com/Edin2021/trillow-real-estate",
+    demo: "https://trillow-real-estate.pages.dev/",
+    selected: false,
   },
 ];
 

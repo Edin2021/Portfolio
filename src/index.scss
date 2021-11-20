@@ -1005,16 +1005,23 @@ footer {
     font-size: 1.75rem;
   }
 
-  .projects + .section-image {
-    > img {
-      display: none;
+  .projects {
+    .project {
+      .name {
+        font-size: 5vw !important;
+      }
     }
-    a {
-      right: 50%;
-      transform: translateX(50%);
-      font-size: 1.5rem;
-      img {
-        width: 105%;
+    & + .section-image {
+      > img {
+        display: none;
+      }
+      a {
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 1.5rem;
+        img {
+          width: 105%;
+        }
       }
     }
   }
