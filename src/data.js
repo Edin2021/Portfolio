@@ -1,6 +1,7 @@
 import audiophileImage from "./images/project-images/audiophile.png";
 import superchatImage from "./images/project-images/superchat.png";
 import trillowRealEstateImage from "./images/project-images/trillow.png";
+import digitalDesignImage from "./images/project-images/digital-design.png";
 
 const projects = [
   {
@@ -11,7 +12,7 @@ const projects = [
     info: "This website contains a checkout page with form validation, a cart and more.",
     repo: "https://github.com/Edin2021/audiophile-ecommerce",
     demo: "https://audiophile-ecommerce.pages.dev/",
-    selected: true,
+    selected: false,
   },
   {
     id: "2",
@@ -32,6 +33,16 @@ const projects = [
     repo: "https://github.com/Edin2021/trillow-real-estate",
     demo: "https://trillow-real-estate.pages.dev/",
     selected: false,
+  },
+  {
+    id: "4",
+    image: digitalDesignImage,
+    techUsed: "Sass / Javascript / ReacjJS",
+    name: "digital design",
+    info: "This website contains many, relatively complex, effects and animations to give the user a mesmerizing experience.",
+    repo: "https://github.com/Edin2021/digital-design-agency",
+    demo: "https://digital-design.pages.dev/",
+    selected: true,
   },
 ];
 
