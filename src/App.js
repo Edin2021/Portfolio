@@ -7,16 +7,17 @@ import Error from "./pages/Error";
 
 function App() {
   return (
-    <Router>
-      <Fragment>
-        <ScrollToTop />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/projects" component={Projects} />
-          <Route path="*" component={Error} />
-        </Switch>
-      </Fragment>
-    </Router>
+    <></>
+//     <Router>
+//       <Fragment>
+//         <ScrollToTop />
+//         <Switch>
+//           <Route exact path="/" component={Home} />
+//           <Route path="/projects" component={Projects} />
+//           <Route path="*" component={Error} />
+//         </Switch>
+//       </Fragment>
+//     </Router>
   );
 }
 
