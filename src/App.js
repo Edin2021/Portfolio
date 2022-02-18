@@ -7,6 +7,7 @@ import Error from "./pages/Error";
 
 function App() {
   return (
+    <></>
     <Router>
       <Fragment>
         <ScrollToTop />
