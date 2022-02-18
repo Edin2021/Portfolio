@@ -12,8 +12,19 @@ function Header() {
     setHeaderHeight(header.current.offsetHeight);
   }, []);
 
-  const handleScroll = () => {
-    if (window.scrollY > headerHeight) {
+  let lastScrollTop = window.scrollY;
+
+  const handleScroll = (e) => {
+    let direction = "";
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > lastScrollTop) {
+      direction = "DOWN";
+    } else {
+      direction = "UP";
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+
+    if (window.scrollY > headerHeight && direction === "UP") {
       setIsSticky(true);
     } else {
       setIsSticky(false);

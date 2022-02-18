@@ -2,6 +2,7 @@ import audiophileImage from "./images/project-images/audiophile.png";
 import superchatImage from "./images/project-images/superchat.png";
 import trillowRealEstateImage from "./images/project-images/trillow.png";
 import digitalDesignImage from "./images/project-images/digital-design.png";
+import weatherAppImage from "./images/project-images/weather-app.png";
 
 const projects = [
   {
@@ -43,6 +44,16 @@ const projects = [
     repo: "https://github.com/Edin2021/digital-design-agency",
     demo: "https://digital-design.pages.dev/",
     selected: true,
+  },
+  {
+    id: "5",
+    image: weatherAppImage,
+    techUsed: "Sass / Javascript / ReacjJS / API",
+    name: "Weather App",
+    info: "This application/website contains different themes based on weather conditions, two different layouts and more.",
+    repo: "https://github.com/Edin2021/weather-app",
+    demo: "https://weather-app-web.pages.dev/",
+    selected: false,
   },
 ];
 

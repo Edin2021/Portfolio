@@ -776,6 +776,9 @@ footer {
       right: 0;
       color: inherit;
       cursor: pointer;
+      .icon {
+        pointer-events: none;
+      }
     }
   }
 

@@ -14,37 +14,38 @@ function Nav({ position }) {
     setCurrPage(currPath);
   }, []);
 
+  const handleCloseMenu = (e) => {
+    const isLink = e.target.nodeName === "A";
+    const isCloseBtn = e.target.classList.contains("close-menu-btn");
+    if (isLink || isCloseBtn) {
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <>
-      <nav className={`${position} ${openMenu && "active"}`}>
+      <nav
+        className={`${position} ${openMenu && "active"}`}
+        onClick={handleCloseMenu}
+      >
         {position === "header-nav" && (
-          <button
-            type="button"
-            className="close-menu-btn"
-            onClick={() => setMenuOpen(false)}
-          >
-            <IoMdClose />
+          <button type="button" className="close-menu-btn">
+            <span className="icon">
+              <IoMdClose />
+            </span>
             <span className="visually-hidden">close menu button</span>
           </button>
         )}
 
         {currPage !== "projects" ? (
           <>
-            <Link to="/" onClick={() => setMenuOpen(false)}>
-              Home
-            </Link>
-            <a href="#selectedProjects" onClick={() => setMenuOpen(false)}>
-              Projects
-            </a>
-            <a href="#about" onClick={() => setMenuOpen(false)}>
-              About
-            </a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>
-              Contact
-            </a>
+            <Link to="/">Home</Link>
+            <a href="#selectedProjects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
           </>
         ) : (
-          <Link to="/" onClick={() => setMenuOpen(false)}>
+          <Link to="/">
             <span aria-hidden="true">
               <IoMdArrowRoundBack />
             </span>{" "}
