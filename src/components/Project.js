@@ -1,4 +1,4 @@
-import demoLinkIcon from "../images/illustarions/demo-link-icon.png";
+import demoLinkIcon from "../images/illustarions/demo-link-icon.svg";
 import { FaGithub } from "react-icons/fa";
 
 function Project({ project }) {

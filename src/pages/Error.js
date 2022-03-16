@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import pageNotFoundImage from "../images/illustarions/404-page-not-found.png";
+import pageNotFoundImage from "../images/illustarions/404-page-not-found.svg";
 
 function Error() {
   return (

@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { TiThMenu } from "react-icons/ti";
 import { IoMdClose, IoMdArrowRoundBack } from "react-icons/io";
-import ResumeButton from "./ResumeButton";
 import { Link } from "react-router-dom";
 
 function Nav({ position }) {
@@ -41,6 +40,7 @@ function Nav({ position }) {
           <>
             <Link to="/">Home</Link>
             <a href="#selectedProjects">Projects</a>
+            <a href="#technologies">Technologies</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </>
@@ -52,8 +52,6 @@ function Nav({ position }) {
             Back home
           </Link>
         )}
-
-        <ResumeButton position="inside" />
       </nav>
       {position && (
         <button

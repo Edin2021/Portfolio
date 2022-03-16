@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useGlobalContext } from "../context";
-import logo from "../images/logos/logo.png";
+import logo from "../images/logos/logo.svg";
 import Nav from "./Nav";
 
 function Header() {

@@ -22,12 +22,12 @@ function Footer() {
               </li>
             </ul>
           </article>
-          <Nav />
         </div>
+        <span className="copyright">
+          <BiCopyright aria-hidden="true" /> Copyright 2021
+        </span>
       </div>
-      <span className="copyright">
-        <BiCopyright aria-hidden="true" /> Copyright 2021
-      </span>
+
       <img src={footerImage} alt="footer wave" />
     </footer>
   );

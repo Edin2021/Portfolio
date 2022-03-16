@@ -10,7 +10,6 @@ function Hero() {
     <div className="hero">
       <div className="hero-centar" style={{ paddingTop: `${headerHeight}px` }}>
         <Banner />
-        <ResumeButton position="outside" />
       </div>
       <img className="hero-image" src={heroImage} alt="hero background" />
     </div>

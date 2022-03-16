@@ -1,4 +1,5 @@
-import bannerImage from "../images/illustarions/banner-illustration.png";
+import bannerImage from "../images/illustarions/guy-waving.svg";
+import ResumeButton from "./ResumeButton";
 
 function Banner() {
   return (
@@ -9,6 +10,7 @@ function Banner() {
           I am Edin Sikira, an ambitious front end developer on an endless
           learning journey.
         </p>
+        <ResumeButton />
       </h1>
       <div className="image">
         <img src={bannerImage} alt="banner illustration" />

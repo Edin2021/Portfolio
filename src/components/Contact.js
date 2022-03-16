@@ -1,7 +1,7 @@
-import peopleTexting from "../images/illustarions/contact-illustration.png";
-import phone from "../images/illustarions/phone.png";
-import flyer from "../images/illustarions/flyer.png";
-import mail from "../images/illustarions/mail.png";
+import peopleTexting from "../images/illustarions/contact-illustration.svg";
+import phone from "../images/illustarions/phone.svg";
+import flyer from "../images/illustarions/flyer.svg";
+import mail from "../images/illustarions/mail.svg";
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";

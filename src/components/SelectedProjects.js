@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import guyThinking from "../images/illustarions/guy-thinking.png";
-import longArrow from "../images/illustarions/logn-arrow.png";
+import guyThinking from "../images/illustarions/guy-thinking.svg";
+import longArrow from "../images/illustarions/long-arrow.svg";
 import projects from "../data";
 // import Loading from "./Loading";
 import Project from "./Project";
