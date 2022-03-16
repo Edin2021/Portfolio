@@ -1,7 +1,6 @@
 import footerImage from "../images/footer-image.png";
-import { FiMail, FiPhone } from "react-icons/fi";
+import { FiMail, FiPhone, FiLinkedin } from "react-icons/fi";
 import { BiCopyright } from "react-icons/bi";
-import Nav from "./Nav.js";
 
 function Footer() {
   return (
@@ -19,6 +18,14 @@ function Footer() {
               <li>
                 <span className="visually-hidden">my phone number</span>
                 <FiPhone aria-hidden="true" /> 0603294057
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/edin-sikira-3b2013217/"
+                  target="_blank"
+                >
+                  <FiLinkedin aria-hidden="true" /> Linkedin
+                </a>
               </li>
             </ul>
           </article>

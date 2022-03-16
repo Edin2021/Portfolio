@@ -685,22 +685,29 @@ footer {
     object-fit: cover;
   }
 
-  ul {
-    list-style-type: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-    li {
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
+  .contact-info {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      line-height: 100%;
+      font-weight: 500;
     }
-  }
-
-  .contact-info h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    line-height: 100%;
-    font-weight: 500;
+    ul {
+      list-style-type: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+      a,
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .copyright {
@@ -913,10 +920,6 @@ footer {
       list-style-type: none;
       font-size: 1.25rem;
       font-weight: bold;
-      li {
-        margin-bottom: 0.5rem;
-        @include flexCenter(row);
-      }
     }
 
     .contact-info {
