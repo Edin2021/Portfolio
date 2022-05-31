@@ -31,7 +31,7 @@ function Footer() {
           </article>
         </div>
         <span className="copyright">
-          <BiCopyright aria-hidden="true" /> Copyright 2021
+          <BiCopyright aria-hidden="true" /> Copyright {new Date().getFullYear()}
         </span>
       </div>
 
