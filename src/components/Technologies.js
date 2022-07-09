@@ -3,7 +3,6 @@ import cssLogo from "../images/logos/css-logo.svg";
 import javascriptLogo from "../images/logos/javascript-logo.svg";
 import sassLogo from "../images/logos/sass-logo.svg";
 import reactLogo from "../images/logos/react-logo.svg";
-import angularLogo from "../images/logos/angular-logo.svg";
 import gitLogo from "../images/logos/git-logo.svg";
 
 function Technologies() {
@@ -31,9 +30,6 @@ function Technologies() {
           </div>
           <div className="logo">
             <img src={reactLogo} alt="react logo" />
-          </div>
-          <div className="logo">
-            <img src={angularLogo} alt="angular logo" />
           </div>
           <div className="logo">
             <img src={gitLogo} alt="git logo" />
