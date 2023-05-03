@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useGlobalContext } from "../context";
-import logo from "../images/logos/logo.svg";
+import logo from "../images/logos/logo.png";
 import Nav from "./Nav";
 
 function Header() {
@@ -43,7 +43,9 @@ function Header() {
     <>
       <header ref={header} className={isSticky ? "sticky" : null}>
         <div className="header-center">
-          <img className="logo" src={logo} alt="logo" />
+          <a href="/">
+            <img className="logo" src={logo} alt="logo" />
+          </a>
           <Nav position="header-nav" />
         </div>
       </header>

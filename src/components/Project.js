@@ -19,7 +19,7 @@ function Project({ project }) {
         <h3 className="name">{name}</h3>
         <p className="info">{info}</p>
         <a className="demo-link" href={demo} target="_blank" rel="noreferrer">
-          Live Demo <img src={demoLinkIcon} alt="demo link icon" />
+          Demo <img src={demoLinkIcon} alt="demo link icon" />
         </a>
       </div>
     </article>

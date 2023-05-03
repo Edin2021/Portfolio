@@ -59,7 +59,7 @@ function Contact() {
   return (
     <section className="contact">
       <h2>
-        Contact Me <span id="contact"></span>
+        Contact<span id="contact"></span>
       </h2>
       <span className="underline"></span>
       <form

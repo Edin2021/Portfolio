@@ -27,7 +27,6 @@ function SelectedProjects() {
         ))}
       </div>
       <div className="section-image">
-        <img src={guyThinking} alt="guy thinking" />
         <Link to="/projects">
           View All Projects <img src={longArrow} alt="long arrow" />
         </Link>
