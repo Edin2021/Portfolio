@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import guyThinking from "../images/illustarions/guy-thinking.svg";
 import longArrow from "../images/illustarions/long-arrow.svg";
-import projects from "../data";
+import { projects } from "../data";
 // import Loading from "./Loading";
 import Project from "./Project";
 
@@ -16,7 +15,7 @@ function SelectedProjects() {
   }, []);
 
   return (
-    <section>
+    <section className="selected-projects">
       <h2>
         Selected Projects <span id="selectedProjects"></span>
       </h2>
@@ -25,11 +24,11 @@ function SelectedProjects() {
         {selectedProjects.map((selectedProject) => (
           <Project key={selectedProject.id} project={selectedProject} />
         ))}
-      </div>
-      <div className="section-image">
-        <Link to="/projects">
-          View All Projects <img src={longArrow} alt="long arrow" />
-        </Link>
+        <div className="view-all-projects">
+          <Link to="/projects">
+            View All Projects <img src={longArrow} alt="long arrow" />
+          </Link>
+        </div>
       </div>
     </section>
   );

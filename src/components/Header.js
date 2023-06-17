@@ -12,19 +12,11 @@ function Header() {
     setHeaderHeight(header.current.offsetHeight);
   }, []);
 
-  let lastScrollTop = window.scrollY;
-
   const handleScroll = (e) => {
-    let direction = "";
     let st = window.pageYOffset || document.documentElement.scrollTop;
-    if (st > lastScrollTop) {
-      direction = "DOWN";
-    } else {
-      direction = "UP";
-    }
-    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    console.log('st', st);
 
-    if (window.scrollY > headerHeight && direction === "UP") {
+    if (window.scrollY > headerHeight) {
       setIsSticky(true);
     } else {
       setIsSticky(false);

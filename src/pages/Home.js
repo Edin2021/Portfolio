@@ -16,7 +16,6 @@ function Home() {
         <SelectedProjects />
         <Technologies />
         <About />
-        <Contact />
       </main>
       <Footer />
     </>

@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { TiThMenu } from "react-icons/ti";
+import { HiMenuAlt3 } from "react-icons/hi"
 import { IoMdClose, IoMdArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 
@@ -59,7 +59,7 @@ function Nav({ position }) {
           type="button"
           onClick={() => setMenuOpen(!openMenu)}
         >
-          <TiThMenu />
+          <HiMenuAlt3 />
           <span className="visually-hidden">Menu</span>
         </button>
       )}

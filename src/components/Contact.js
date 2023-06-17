@@ -57,7 +57,7 @@ function Contact() {
   }, [isSent]);
 
   return (
-    <section className="contact">
+    <section className="contact visually-hidden">
       <h2>
         Contact<span id="contact"></span>
       </h2>
@@ -81,10 +81,6 @@ function Contact() {
             {...register("name", { required: true })}
             disabled={isSending}
           />
-          <div className="error-message">
-            Name is required.
-            <span></span>
-          </div>
         </label>
         <label htmlFor="email" className={`${errors.email && "active"}`}>
           Email
@@ -95,12 +91,6 @@ function Contact() {
             {...register("email", { required: true, pattern: EMAIL_REGEX })}
             disabled={isSending}
           />
-          <div className={`error-message ${errors.email && "active"}`}>
-            {errors.email?.type === "required"
-              ? "Email is required."
-              : "Invaild email."}
-            <span></span>
-          </div>
         </label>
         <label htmlFor="message">
           Message
@@ -108,7 +98,6 @@ function Contact() {
             type="text"
             id="message"
             name="message"
-            placeholder="optional"
             {...register("message")}
             disabled={isSending}
           ></textarea>

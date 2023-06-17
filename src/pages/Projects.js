@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Project from "../components/Project";
-import projects from "../data";
+import { projects } from "../data";
 
 function Projects() {
   return (

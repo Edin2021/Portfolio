@@ -57,4 +57,11 @@ const projects = [
   },
 ];
 
-export default projects;
+const sections = {
+  about:
+    "My name is Edin, I'm a 22-year-old front-end developer based in Bosnia and Herzegovina, with 3 years of experience working in the said work department. Passionate about learning and working on different projects, tasks, and challenges, my willingness is to develop and create new things, using the already acquired and or the flexibility of attaining new technologies that are presented to me depending on the required needs at hand.",
+  technologies:
+    "Following are the technologies and tools that I have worked with, adding more as I progress on this career path. My learning methodology is built upon a combination of tutorials and reading the necessary documentation, after which I can apply the knowledge by doing projects independently, progressively increasing the complexity. Even when I started doing this, I was quite aware that a huge part of this job is and will be an open mind to learning new things in a constantly changing and developing environment so I got used to that quite early on this career path.",
+};
+
+export { projects, sections };

@@ -1,4 +1,4 @@
-import footerImage from "../images/footer-image.png";
+import footerImage from "../images/hero-image.png";
 import { FiMail, FiPhone, FiLinkedin } from "react-icons/fi";
 import { BiCopyright } from "react-icons/bi";
 
@@ -10,6 +10,7 @@ function Footer() {
         <div>
           <article className="contact-info">
             <h2>Contact Info</h2>
+            <span id="contact"></span>
             <ul>
               <li>
                 <span className="visually-hidden">my email</span>
@@ -23,6 +24,7 @@ function Footer() {
                 <a
                   href="https://www.linkedin.com/in/edin-sikira-3b2013217/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <FiLinkedin aria-hidden="true" /> Linkedin
                 </a>
@@ -31,11 +33,10 @@ function Footer() {
           </article>
         </div>
         <span className="copyright">
-          <BiCopyright aria-hidden="true" /> Copyright {new Date().getFullYear()}
+          <BiCopyright aria-hidden="true" /> Copyright{" "}
+          {new Date().getFullYear()}
         </span>
       </div>
-
-      <img src={footerImage} alt="footer wave" />
     </footer>
   );
 }
