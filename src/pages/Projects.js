@@ -8,6 +8,7 @@ function Projects() {
   return (
     <>
       <Header />
+      <div className="projects-bg"></div>
       <main>
         <section className="all-projects">
           <h2>Projects</h2>

@@ -20,7 +20,7 @@ function Technologies() {
       </div>
       <p>{sections.technologies}</p>
       <div className="logos">
-        <img src={htmlLogo} alt="html logo" title="Html was one.."/>
+        <img src={htmlLogo} alt="html logo" title="Html was one.." />
 
         <img src={cssLogo} alt="css logo" />
 
@@ -35,8 +35,6 @@ function Technologies() {
         <img src={tailwind} alt="tailwind logo" className="side-padding" />
 
         <img src={gitLogo} alt="git logo" className="side-padding" />
-
-        <img src={storyblok} alt="storyblok logo" className="side-padding" />
       </div>
     </section>
   );

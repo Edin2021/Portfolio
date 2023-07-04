@@ -40,7 +40,7 @@ const projects = [
     image: digitalDesignImage,
     techUsed: "Sass / Javascript / ReacjJS",
     name: "digital design",
-    info: "This website contains many, relatively complex, effects and animations to give the user a mesmerizing experience.",
+    info: "This website contains many complex effects and animations to give the user a mesmerizing experience.",
     repo: "https://github.com/Edin2021/digital-design-agency",
     demo: "https://digital-design.pages.dev/",
     selected: true,

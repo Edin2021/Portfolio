@@ -28,14 +28,14 @@ function Footer() {
                 >
                   <FiLinkedin aria-hidden="true" /> Linkedin
                 </a>
+                <span className="copyright">
+                  <BiCopyright aria-hidden="true" /> Copyright{" "}
+                  {new Date().getFullYear()}
+                </span>
               </li>
             </ul>
           </article>
         </div>
-        <span className="copyright">
-          <BiCopyright aria-hidden="true" /> Copyright{" "}
-          {new Date().getFullYear()}
-        </span>
       </div>
     </footer>
   );
