@@ -26,7 +26,7 @@ function SelectedProjects() {
         ))}
         <div className="view-all-projects">
           <Link to="/projects">
-            View All Projects <img src={longArrow} alt="long arrow" />
+            View All Projects
           </Link>
         </div>
       </div>
