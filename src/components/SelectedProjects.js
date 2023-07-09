@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import longArrow from "../images/illustarions/long-arrow.svg";
 import { projects } from "../data";
-// import Loading from "./Loading";
 import Project from "./Project";
 
 function SelectedProjects() {
   const [selectedProjects, setSelectedProjects] = useState([]);
-  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setSelectedProjects(projects.filter((project) => project.selected));
-    // setLoading((loading) => !loading);
   }, []);
 
   return (

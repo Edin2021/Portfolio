@@ -8,8 +8,8 @@
 }
 // color variablers
 $clr-primary: #424656;
-$clr-accent-1: #0C99FF;
-$clr-accent-2: #4949E1;
+$clr-accent-1: #0c99ff;
+$clr-accent-2: #4949e1;
 $clr-heading: #102a42;
 $clr-text: #787878;
 $clr-red-light: #ff8d8d;
@@ -83,7 +83,7 @@ a {
   top: 0;
   width: 100%;
   height: 50rem;
-  background: linear-gradient(to left, #FFFFFF, #ECE9E6);
+  background: linear-gradient(to left, #ffffff, #ece9e6);
   clip-path: polygon(0% 0%, 0% 100%, 120% 100%);
   rotate: 180deg;
   z-index: -1;
@@ -163,7 +163,7 @@ nav {
       transform: translateX(-100%);
     }
     &::after {
-      content: '';
+      content: "";
       width: 100%;
       height: 0.09rem;
       border-radius: 1rem;
@@ -172,9 +172,10 @@ nav {
       bottom: 0;
       transform: translateX(-101%);
       transition: all 0.3s ease;
+      opacity: 0.5;
     }
     &::before {
-      content: '';
+      content: "";
       width: 100%;
       height: 0.09rem;
       border-radius: 1rem;
@@ -183,6 +184,7 @@ nav {
       bottom: 0;
       transform: translateX(101%);
       transition: all 0.3s ease;
+      opacity: 0.1;
     }
     &:hover {
       span {
@@ -190,12 +192,13 @@ nav {
       }
       &::after {
         transform: translateX(0%);
+        opacity: 1;
       }
       &::before {
         transform: translateX(0%);
+        opacity: 1;
       }
     }
-    
   }
 }
 
@@ -243,7 +246,7 @@ main {
   width: 100%;
   height: 100vh;
   margin-bottom: 6rem;
-  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  background: linear-gradient(to right, #ffffff, #ece9e6);
 }
 
 .hero-centar {
@@ -432,7 +435,7 @@ section {
     background: white;
     &:hover {
       .image img {
-       transform: scale(1.1);
+        transform: scale(1.1);
       }
     }
     .image {
@@ -459,21 +462,21 @@ section {
         justify-content: space-between;
         align-items: center;
         color: $clr-text;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: normal;
         max-width: 100%;
       }
 
       .name {
         text-transform: capitalize;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 100%;
         font-weight: 400;
       }
 
       .info {
         color: $clr-text;
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin: 0.75rem 0;
         line-height: 1.4;
       }
@@ -482,30 +485,68 @@ section {
         display: flex;
         align-items: center;
         width: max-content;
-        font-size: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        font-size: 1.25rem;
         font-weight: 500;
-        text-transform: uppercase;
         color: $clr-accent-1;
-        line-height: 100%;
-        transition: opacity 0.3s ease;
+        line-height: 125%;
         margin-bottom: 0;
         margin-top: auto;
-        &:hover {
-          opacity: 0.7;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 0.09rem;
+          border-radius: 1rem;
+          background-color: $clr-accent-1;
+          position: absolute;
+          bottom: 0;
+          transform: translateX(-101%);
+          transition: all 0.3s ease;
+          opacity: 0.5;
         }
-        img {
-          max-width: 20px;
-          margin-left: 0.25rem;
-          transform: translateY(0.05rem);
+        &::before {
+          content: "";
+          width: 100%;
+          height: 0.09rem;
+          border-radius: 1rem;
+          background-color: $clr-heading;
+          position: absolute;
+          bottom: 0;
+          transform: translateX(101%);
+          transition: all 0.3s ease;
+          opacity: 0.1;
+        }
+        &:hover {
+          span {
+            transform: translateX(-150%);
+          }
+          &::after {
+            transform: translateX(0%);
+            opacity: 1;
+          }
+          &::before {
+            transform: translateX(0%);
+            opacity: 1;
+          }
         }
       }
 
       .repo-link {
-        font-size: 2.75rem;
+        font-size: 3rem;
         color: black;
-        transition: opacity 0.3s ease;
+        transition: all 0.3s ease;
+        svg {
+          border-radius: 50%;
+          border: 2px solid transparent;
+          transition: all 0.3s ease;
+          padding: 2px;
+        }
         &:hover {
-          opacity: 0.7;
+          transform: scale(0.9);
+          svg {
+            border: 2px solid $clr-heading;
+          }
         }
       }
     }
@@ -535,7 +576,7 @@ section {
     left: 50%;
     transform: translate(-50%, 0);
     overflow: hidden;
-    
+
     &:hover {
       img {
         transform: translateX(1rem);
@@ -543,7 +584,7 @@ section {
     }
 
     &::after {
-      content: '';
+      content: "";
       width: 100%;
       height: 0.09rem;
       border-radius: 1rem;
@@ -552,9 +593,10 @@ section {
       bottom: 0;
       transform: translateX(-101%);
       transition: all 0.3s ease;
+      opacity: 0.5;
     }
     &::before {
-      content: '';
+      content: "";
       width: 100%;
       height: 0.09rem;
       border-radius: 1rem;
@@ -563,6 +605,7 @@ section {
       bottom: 0;
       transform: translateX(101%);
       transition: all 0.3s ease;
+      opacity: 0.1;
     }
     &:hover {
       span {
@@ -570,19 +613,13 @@ section {
       }
       &::after {
         transform: translateX(0%);
+        opacity: 1;
       }
       &::before {
         transform: translateX(0%);
+        opacity: 1;
       }
     }
-
-    // img {
-    //   position: absolute;
-    //   bottom: -0.5rem;
-    //   z-index: 1;
-    //   transition: transform 0.3s ease-in-out;
-    //   width: 104%;
-    // }
   }
 }
 
@@ -807,9 +844,17 @@ footer {
   @include flexCenter(column);
   width: 100%;
   position: relative;
-  background: #ECE9E6;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   color: $clr-heading;
   padding: 1rem 0;
@@ -935,7 +980,7 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, F
 
   .view-all-projects {
     grid-column: 1 / 3;
-    margin-top: 3rem
+    margin-top: 3rem;
   }
 
   .banner {
@@ -1099,7 +1144,7 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, F
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-      };
+      }
     }
 
     .contact-info {
@@ -1157,7 +1202,7 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, F
 
   .view-all-projects {
     grid-column: 1 / 1;
-    margin-top: 3rem
+    margin-top: 3rem;
   }
 
   .projects + .section-image a {
