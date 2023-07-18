@@ -6,7 +6,7 @@ function ResumeButton() {
     <div className={`resume`}>
       <button type="button">
         <a href={resume} download={`EdinSikiraResume`}>
-          Resume <img src={iconDownload} alt="download" />
+          Resume
         </a>
       </button>
     </div>

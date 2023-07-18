@@ -5,8 +5,9 @@ import sassLogo from "../images/logos/sass-logo.svg";
 import reactLogo from "../images/logos/react-logo.svg";
 import vue from "../images/logos/vue.svg";
 import gitLogo from "../images/logos/git-logo.svg";
-import storyblok from "../images/logos/storyblok.svg";
+import gitDark from "../images/logos/git-dark.svg";
 import tailwind from "../images/logos/tailwind.svg";
+import tailwindDark from "../images/logos/tailwind-dark.svg";
 import { sections } from "../data";
 
 function Technologies() {
@@ -32,9 +33,11 @@ function Technologies() {
 
         <img src={vue} alt="vue logo" />
 
-        <img src={tailwind} alt="tailwind logo" className="side-padding" />
+        <img src={tailwind} alt="tailwind logo" className="side-padding show-light" />
+        <img src={tailwindDark} alt="tailwind logo" className="side-padding show-dark" />
 
-        <img src={gitLogo} alt="git logo" className="side-padding" />
+        <img src={gitLogo} alt="git logo" className="side-padding show-light"/>
+        <img src={gitDark} alt="git logo" className="side-padding show-dark"/>
       </div>
     </section>
   );

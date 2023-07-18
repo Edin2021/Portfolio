@@ -1,4 +1,5 @@
 import bannerImage from "../images/illustarions/guy-waving.svg";
+import bannerImageDark from "../images/illustarions/guy-waving-dark.svg";
 import ResumeButton from "./ResumeButton";
 
 function Banner() {
@@ -13,7 +14,8 @@ function Banner() {
         <ResumeButton />
       </h1>
       <div className="image">
-        <img src={bannerImage} alt="banner illustration" />
+        <img src={bannerImage} alt="banner illustration" className="show-light"/>
+        <img src={bannerImageDark} alt="banner illustration" className="show-dark"/>
       </div>
     </section>
   );
