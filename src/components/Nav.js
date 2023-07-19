@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { IoIosClose, IoMdArrowRoundBack } from "react-icons/io";
+import { IoIosClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 function Nav({ position }) {
   const [openMenu, setMenuOpen] = useState(false);
   const [currPage, setCurrPage] = useState("");
+  const [mobileNav, setMobileNav] = useState(false)
 
   useEffect(() => {
     const currPath = window.location.href.split("/").pop();
@@ -25,6 +26,25 @@ function Nav({ position }) {
     setMenuOpen(!openMenu);
     document.body.classList.add('disable-scroll');
   };
+
+  useEffect(() => {
+    function handleResize() {
+       if (window.innerWidth <= 992 && !mobileNav) {
+        const nav = document.querySelector('.header-nav')
+        const root = document.getElementById('root')
+        root.appendChild(nav);
+        setMobileNav(true)
+       } else if (window.innerWidth > 992 && mobileNav) {
+        const nav = document.querySelector('.header-nav')
+        const header = document.querySelector('.header-center')
+        header.appendChild(nav);
+        setMobileNav(false)
+       }
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+}, [mobileNav]);
+
 
   return (
     <>
@@ -51,9 +71,6 @@ function Nav({ position }) {
           </>
         ) : (
           <Link to="/">
-            <span aria-hidden="true">
-              <IoMdArrowRoundBack />
-            </span>{" "}
             Back home
           </Link>
         )}
