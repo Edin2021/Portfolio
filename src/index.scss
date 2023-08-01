@@ -107,6 +107,8 @@ html.dark-mode {
   font-family: "Montserrat", sans-serif;
   // font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -298,7 +300,7 @@ main {
   display: flex;
   flex-direction: column;
   width: var(--container);
-  &> section {
+  & > section {
     margin-bottom: 6rem;
   }
 }
@@ -457,7 +459,7 @@ section {
     opacity: 0.8;
     > span {
       position: absolute;
-      top: -150px;
+      top: -6rem;
     }
   }
 }
@@ -965,11 +967,10 @@ footer {
     }
     a {
       margin: 0;
-      padding: 2.5vh 0;
-      margin: 1rem 0;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       transition: transform 1s ease;
       transform: translateX(-100%);
+      padding: 1rem 0;
       &::after {
         content: "";
         width: unset;
@@ -1141,10 +1142,13 @@ footer {
       list-style-type: none;
       font-size: 1.25rem;
       font-weight: bold;
-      li:last-of-type {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+      li {
+        align-items: center;
+        justify-content: center;
+        &:last-of-type {
+          display: flex;
+          flex-direction: column;
+        }
       }
     }
 

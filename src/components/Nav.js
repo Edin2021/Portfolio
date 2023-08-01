@@ -66,6 +66,7 @@ function Nav({ position }) {
             <Link to="/">Home</Link>
             <a href="#selectedProjects">Projects</a>
             <a href="#technologies">Technologies</a>
+            <a href="#experience">Experience</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </>

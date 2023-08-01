@@ -1,5 +1,3 @@
-import footerImage from "../images/hero-image.png";
-import { FiMail, FiPhone, FiLinkedin } from "react-icons/fi";
 import { BiCopyright } from "react-icons/bi";
 
 function Footer() {
@@ -14,11 +12,11 @@ function Footer() {
             <ul>
               <li>
                 <span className="visually-hidden">my email</span>
-                <FiMail aria-hidden="true" /> edinsikira5@gmail.com
+                edinsikira5@gmail.com
               </li>
               <li>
                 <span className="visually-hidden">my phone number</span>
-                <FiPhone aria-hidden="true" /> 0603294057
+                0603294057
               </li>
               <li>
                 <a
@@ -26,7 +24,7 @@ function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FiLinkedin aria-hidden="true" /> Linkedin
+                  Linkedin
                 </a>
                 <span className="copyright">
                   <BiCopyright aria-hidden="true" /> Copyright{" "}
