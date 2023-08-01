@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
 @mixin flexCenter($direction) {
   display: flex;
@@ -9,7 +10,7 @@
 
 html {
   --bg-1: white;
-  --bg-2: white;
+  --bg-2: #f9f9f9;
   --text-1: #102a42;
   --text-2: #787878;
   --text-3: #ffffff;
@@ -83,6 +84,11 @@ html.dark-mode {
       transform: scale(1);
     }
   }
+  .quotation-mark {
+    span {
+      opacity: 0.5;
+    }
+  }
 }
 
 #root {
@@ -99,6 +105,7 @@ html.dark-mode {
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  // font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
 
@@ -142,6 +149,15 @@ a {
   clip-path: polygon(0% 0%, 0% 100%, 120% 100%);
   rotate: 180deg;
   z-index: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideFromTop {
@@ -191,8 +207,8 @@ header {
   &.sticky {
     position: fixed;
     background-color: var(--bg-2);
-    box-shadow: 0 0 1px var(--shadow-1);
-    animation: slideFromTop 0.15s ease-in forwards;
+    animation: slideFromTop 0.15s ease-in forwards,
+      fadeIn 0.25s ease-in forwards;
     .header-center {
       padding-top: 0.5rem;
     }
@@ -282,6 +298,9 @@ main {
   display: flex;
   flex-direction: column;
   width: var(--container);
+  &> section {
+    margin-bottom: 6rem;
+  }
 }
 
 .banner {
@@ -391,7 +410,7 @@ main {
   gap: 0.5rem;
   background-color: var(--accent-2);
   border: none;
-  color: var(--text-3);
+  color: var(--bg-1);
   font-weight: 500;
   font-size: 1rem;
   padding: 0.75rem 1rem;
@@ -429,7 +448,6 @@ main {
 }
 
 section {
-  margin-bottom: 5rem;
   h2 {
     font-size: 1.5rem;
     font-weight: 500;
@@ -461,10 +479,9 @@ section {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 2rem;
-  margin: 3rem 0;
+  margin-top: 3rem;
   z-index: 2;
   .project {
-    box-shadow: 0 0 5px var(--shadow-1);
     border-radius: var(--radiusLG);
     overflow: hidden;
     display: flex;
@@ -590,7 +607,6 @@ section {
   }
 }
 
-// guy thinking image
 .view-all-projects {
   position: relative;
   display: flex;
@@ -682,9 +698,7 @@ section {
     max-width: 70ch;
     img {
       max-height: 90px;
-      // border: 1px solid rgb(0, 0, 0, 0.25);
       border: 1px solid transparent;
-      box-shadow: 0 0 3px var(--shadow-1);
       border-radius: 1rem;
       transition: transform 0.3s ease;
       background: var(--bg-2);
@@ -706,8 +720,132 @@ section {
   }
 }
 
+.experience {
+  .tile {
+    width: 100%;
+    display: flex;
+    gap: 3.5rem;
+    padding: 3rem;
+    background: var(--bg-2);
+    border-radius: var(--radiusLG);
+    margin-bottom: 3rem;
+    &:first-of-type {
+      margin-top: 3rem;
+    }
+    &:last-of-type {
+      margin-bottom: 0rem;
+    }
+    aside {
+      display: flex;
+      flex-direction: column;
+      flex: 1.25;
+      a {
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        display: flex;
+      }
+      .logo {
+        width: 100%;
+      }
+    }
+    .recommendations-mobile {
+      display: none;
+    }
+    .recommendations {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-2);
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+      i {
+        line-height: 150%;
+        margin-bottom: 0.5rem;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-weight: 600;
+      }
+    }
+    .quotation-mark {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      font-size: 1.5rem;
+      // color: var(--text-2);
+      &:last-of-type img {
+        transform: rotate(180deg);
+      }
+      span {
+        width: 100%;
+        height: 2px;
+        background: #d9d9d9;
+        border-radius: var(--radiusLG);
+      }
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      flex: 3;
+      h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+        b {
+          font-weight: 600;
+        }
+      }
+      .period {
+        font-size: 0.8rem;
+        color: var(--text-2);
+      }
+      .about {
+        margin-bottom: 0;
+        margin-top: 2rem;
+        h4 {
+          position: relative;
+          display: flex;
+          align-items: center;
+          font-size: 1.3rem;
+        }
+        .underline.vertical {
+          transform: rotate(90deg);
+          width: 1.8rem;
+          height: 0.3rem;
+          position: absolute;
+          left: -1.8rem;
+        }
+        p {
+          margin: 1rem 0;
+          line-height: 175%;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+          padding-left: 2rem;
+          color: var(--text-2);
+          font-size: 0.9rem;
+          li {
+            line-height: 175%;
+          }
+        }
+      }
+    }
+  }
+}
+
 .technologies p,
-.about p {
+.about p,
+.experience p {
   font-size: 1rem;
   line-height: 1.7;
   max-width: 70ch;
@@ -798,15 +936,16 @@ footer {
   }
 
   .projects .project .image {
-    min-height: 300px;
-    height: 300px;
+    min-height: 250px;
+    height: 250px;
   }
 }
 
 @media (max-width: 992px) {
   $transition-duration: 0.25s;
 
-  .header-nav, .mobile-nav {
+  .header-nav,
+  .mobile-nav {
     @include flexCenter(column);
     position: fixed;
     align-items: unset;
@@ -1089,6 +1228,29 @@ footer {
     }
   }
 
+  .experience {
+    .tile {
+      flex-direction: column;
+      padding: 2rem;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      aside {
+        a {
+          margin-bottom: 0;
+        }
+      }
+      .recommendations-mobile {
+        display: block;
+        margin-top: 2rem;
+      }
+      .recommendations-desktop {
+        display: none;
+      }
+      article {
+      }
+    }
+  }
+
   .technologies p,
   .about p {
     font-size: 0.9rem;
@@ -1096,7 +1258,8 @@ footer {
 }
 
 @media (max-width: 600px) {
-  html, html.dark-mode {
+  html,
+  html.dark-mode {
     header .theme-button {
       margin-right: 0rem;
     }
@@ -1155,11 +1318,76 @@ footer {
     right: 10vw;
     font-size: 1.5rem;
   }
+
+  .experience {
+    .tile {
+      gap: 1rem;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      aside {
+        display: flex;
+        flex-direction: column;
+        flex: 1.25;
+        a {
+          margin-bottom: 0rem;
+        }
+      }
+      .recommendations-mobile {
+        margin-top: 1rem;
+      }
+      .recommendations {
+        gap: 1rem;
+        margin: 1rem 0;
+        text-align: center;
+        font-size: 0.6rem;
+        i {
+          line-height: 150%;
+          margin-bottom: 0.5rem;
+        }
+      }
+      .quotation-mark {
+        gap: 1rem;
+        font-size: 1rem;
+        img {
+          width: 2rem;
+        }
+      }
+      article {
+        h3 {
+          margin-bottom: 0.25rem;
+          font-size: 0.8rem;
+          b {
+            font-weight: 600;
+          }
+        }
+        .period {
+          font-size: 0.6rem;
+        }
+        .about {
+          margin-top: 1.25rem;
+          h4 {
+            font-size: 0.9rem;
+          }
+          .underline.vertical {
+            width: 1.5rem;
+            left: -1.5rem;
+          }
+          p {
+            margin: 0.5rem 0;
+            font-size: 0.7rem;
+          }
+          ul {
+            gap: 0.5rem;
+            padding-left: 1rem;
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 450px) {
-
-
   .projects {
     .project {
       .image {
