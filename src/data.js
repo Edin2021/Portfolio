@@ -17,7 +17,7 @@ const projects = [
     info: "This website contains a checkout page with form validation, a cart and more.",
     repo: "https://github.com/Edin2021/audiophile-ecommerce",
     demo: "https://audiophile-ecommerce.pages.dev/",
-    selected: false,
+    selected: true,
   },
   {
     id: "2",
@@ -27,7 +27,7 @@ const projects = [
     info: "This app contains a login/sign up system, a group chat and a button to log out.",
     repo: "https://github.com/Edin2021/superchat",
     demo: "https://superchat.pages.dev/chat",
-    selected: true,
+    selected: false,
   },
   {
     id: "3",
