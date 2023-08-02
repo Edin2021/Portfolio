@@ -1,4 +1,3 @@
-import iconDownload from "../images/icons/download-icon.svg";
 import resume from "../resume/resume.pdf";
 
 function ResumeButton() {

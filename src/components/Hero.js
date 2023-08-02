@@ -1,5 +1,4 @@
 import Banner from "./Banner";
-import ResumeButton from "../components/ResumeButton";
 import { useGlobalContext } from "../context";
 
 function Hero() {

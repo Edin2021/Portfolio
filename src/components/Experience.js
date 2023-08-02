@@ -8,8 +8,8 @@ function Experience() {
         Experience<span id="experience"></span>
       </h2>
       <span className="underline"></span>
-      {sections.experience.map((item) => (
-        <section className="tile">
+      {sections.experience.map((item, i) => (
+        <section className="tile" key={i}>
           <aside>
             <a href={item.company.siteUrl}>
               <img

@@ -8,6 +8,7 @@ import Nav from "./Nav";
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
   const { headerHeight, setHeaderHeight } = useGlobalContext();
+
   const header = useRef();
 
   const handleScroll = () => {
@@ -20,7 +21,6 @@ function Header() {
 
   const setTheme = (theme) => {
     localStorage.setItem("theme", theme);
-    console.log("set to theme", theme);
   };
 
   const getTheme = () => {
