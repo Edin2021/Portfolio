@@ -8,6 +8,21 @@
   flex-direction: $direction;
 }
 
+@mixin linkUnderline($h, $tX, $opacity, $bg) {
+  @media (min-width: 992px) {
+    content: "";
+    position: absolute;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    bottom: 0;
+    background-color: var($bg);
+    height: $h;
+    transform: translateX($tX);
+    opacity: $opacity;
+  }
+}
+
 html {
   --bg-1: white;
   --bg-2: #f9f9f9;
@@ -250,40 +265,13 @@ nav {
     &:last-of-type {
       padding-right: 0;
     }
-    span {
-      transition: transform 0.3s ease;
-      font-size: 1.5rem;
-      position: absolute;
-      transform: translateX(-100%);
-    }
     &::after {
-      content: "";
-      width: 100%;
-      height: 1.5px;
-      border-radius: 1rem;
-      background-color: var(--text-1);
-      position: absolute;
-      bottom: 0;
-      transform: translateX(-101%);
-      transition: all 0.3s ease;
-      opacity: 0.5;
+      @include linkUnderline(1.5px, -101%, 0.5, --text-1);
     }
     &::before {
-      content: "";
-      width: 100%;
-      height: 1.5px;
-      border-radius: 1rem;
-      background-color: var(--accent-1);
-      position: absolute;
-      bottom: 0;
-      transform: translateX(101%);
-      transition: all 0.3s ease;
-      opacity: 0.1;
+      @include linkUnderline(1.5px, 101%, 0.1, --accent-1);
     }
     &:hover {
-      span {
-        transform: translateX(-150%);
-      }
       &::after {
         transform: translateX(0%);
         opacity: 1;
@@ -550,28 +538,10 @@ section {
         margin-bottom: 0;
         margin-top: auto;
         &::after {
-          content: "";
-          width: 100%;
-          height: 1.5px;
-          border-radius: 1rem;
-          background-color: var(--accent-1);
-          position: absolute;
-          bottom: 0;
-          transform: translateX(-101%);
-          transition: all 0.3s ease;
-          opacity: 0.5;
+          @include linkUnderline(1.5px, -101%, 0.5, --accent-1);
         }
         &::before {
-          content: "";
-          width: 100%;
-          height: 1.5px;
-          border-radius: 1rem;
-          background-color: var(--text-1);
-          position: absolute;
-          bottom: 0;
-          transform: translateX(101%);
-          transition: all 0.3s ease;
-          opacity: 0.1;
+          @include linkUnderline(1.5px, 101%, 0.1, --text-1);
         }
         &:hover {
           span {
@@ -639,28 +609,10 @@ section {
     }
 
     &::after {
-      content: "";
-      width: 100%;
-      height: 1.5px;
-      border-radius: 1rem;
-      background-color: var(--accent-1);
-      position: absolute;
-      bottom: 0;
-      transform: translateX(-101%);
-      transition: all 0.3s ease;
-      opacity: 0.5;
+      @include linkUnderline(1.5px, -101%, 0.5, --accent-1);
     }
     &::before {
-      content: "";
-      width: 100%;
-      height: 1.5px;
-      border-radius: 1rem;
-      background-color: var(--text-1);
-      position: absolute;
-      bottom: 0;
-      transform: translateX(101%);
-      transition: all 0.3s ease;
-      opacity: 0.1;
+      @include linkUnderline(1.5px, 101%, 0.1, --text-1);
     }
     &:hover {
       span {
@@ -731,6 +683,11 @@ section {
     background: var(--bg-2);
     border-radius: var(--radiusLG);
     margin-bottom: 3rem;
+    &:hover {
+      aside a {
+        transform: scale(1.1);
+      }
+    }
     &:first-of-type {
       margin-top: 3rem;
     }
@@ -740,12 +697,16 @@ section {
     aside {
       display: flex;
       flex-direction: column;
+      align-items: center;
       flex: 1.25;
+      order: 2;
       a {
         margin-bottom: 2rem;
-        border-radius: 1rem;
+        border-radius: var(--radius);
         overflow: hidden;
         display: flex;
+        max-width: 150px;
+        transition: transform 0.3s ease;
       }
       .logo {
         width: 100%;
@@ -802,7 +763,30 @@ section {
         margin-bottom: 0.5rem;
         font-size: 1.3rem;
         b {
+          display: inline-flex;
           font-weight: 600;
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+          &::after {
+            @include linkUnderline(2.5px, -101%, 0.5, --text-1);
+          }
+          &::before {
+            @include linkUnderline(2.5px, 101%, 0.1, --accent-1);
+          }
+          &:hover {
+            &::after {
+              transform: translateX(0%);
+              opacity: 1;
+            }
+            &::before {
+              transform: translateX(0%);
+              opacity: 1;
+            }
+          }
+        }
+        i {
+          font-weight: 300;
         }
       }
       .period {
@@ -812,6 +796,7 @@ section {
       .about {
         margin-bottom: 0;
         margin-top: 2rem;
+
         h4 {
           position: relative;
           display: flex;
@@ -851,7 +836,6 @@ section {
   font-size: 1rem;
   line-height: 1.7;
   max-width: 70ch;
-  // text-align: center;
   color: var(--text-2);
 }
 
@@ -971,30 +955,6 @@ footer {
       transition: transform 1s ease;
       transform: translateX(-100%);
       padding: 1rem 0;
-      &::after {
-        content: "";
-        width: unset;
-        height: unset;
-        border-radius: unset;
-        background-color: var(--text-1);
-        position: absolute;
-        bottom: 0;
-        transform: translateX(-101%);
-        transition: all 0.3s ease;
-        opacity: 0.5;
-      }
-      &::before {
-        content: "";
-        width: unset;
-        height: unset;
-        border-radius: unset;
-        background-color: var(--accent-1);
-        position: absolute;
-        bottom: 0;
-        transform: translateX(101%);
-        transition: all 0.3s ease;
-        opacity: 0.1;
-      }
       &:hover {
         span {
           transform: translateX(-150%);
@@ -1249,8 +1209,6 @@ footer {
       }
       .recommendations-desktop {
         display: none;
-      }
-      article {
       }
     }
   }

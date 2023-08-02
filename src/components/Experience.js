@@ -1,5 +1,5 @@
 import Recommendation from "../components/Recommendation";
-import { sections } from "../data"
+import { sections } from "../data";
 
 function Experience() {
   return (
@@ -30,7 +30,7 @@ function Experience() {
           <article>
             <h3>
               <b>{item.company.name},</b> {item.company.location} -{" "}
-              {item.company.role}
+              <i> {item.company.role}</i>
             </h3>
             <div className="period">{item.company.period}</div>
             <section className="about">
