@@ -10,8 +10,8 @@ function Experience() {
       </h2>
       <span className="underline"></span>
       {sections.experience.map((item, i) => (
-        <Reveal>
-          <section className="tile" key={i}>
+        <Reveal classes='tile-wrapper' key={i}>
+          <section className="tile" >
             <aside>
               <a href={item.company.siteUrl}>
                 <img

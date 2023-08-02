@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import SelectedProjects from "../components/SelectedProjects";
+import Projects from "../components/Projects";
 import Technologies from "../components/Technologies";
 import About from "../components/About";
 import Experience from "../components/Experience";
@@ -13,7 +13,7 @@ function Home() {
       <Header />
       <Hero />
       <main>
-        <SelectedProjects />
+        <Projects />
         <Technologies />
         <Experience />
         <About />

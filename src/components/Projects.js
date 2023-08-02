@@ -11,20 +11,15 @@ function SelectedProjects() {
   }, []);
 
   return (
-    <section className="selected-projects">
+    <section>
       <h2>
-        Selected Projects <span id="selectedProjects"></span>
+        Projects <span id="projects"></span>
       </h2>
       <span className="underline"></span>
       <div className="projects">
-        {selectedProjects.map((selectedProject) => (
+        {projects.map((selectedProject) => (
           <Project key={selectedProject.id} project={selectedProject} />
         ))}
-        <div className="view-all-projects">
-          <Link to="/projects">
-            View All Projects
-          </Link>
-        </div>
       </div>
     </section>
   );

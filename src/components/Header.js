@@ -23,10 +23,6 @@ function Header() {
     localStorage.setItem("theme", theme);
   };
 
-  const getTheme = () => {
-    return localStorage.getItem("theme");
-  };
-
   const toggleTheme = () => {
     const html = document.getElementsByTagName("html")[0];
     const theme = localStorage.getItem("theme");
@@ -41,34 +37,11 @@ function Header() {
     }
   };
 
-  const setLocalTheme = () => {
-    const html = document.getElementsByTagName("html")[0];
-    const theme = getTheme();
-    if (theme) {
-      if (theme === "light") {
-        html.classList.remove("dark-mode");
-        setTheme("light");
-      } else {
-        html.classList.remove("dark-mode");
-        html.classList.add("dark-mode");
-        setTheme("dark");
-      }
-    } else {
-      const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-      if (darkThemeMq) {
-        setTheme("dark");
-      } else {
-        setTheme("light");
-      }
-    }
-  };
-
   useEffect(() => {
     setHeaderHeight(header.current.offsetHeight);
   }, []);
 
   useEffect(() => {
-    setLocalTheme();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
