@@ -6,16 +6,14 @@ import { Reveal } from "./Reveal";
 function Banner() {
   return (
     <section className="banner">
-      <Reveal>
-        <h1>
-          <span>Hello There.</span>
-          <p>
-            I am Edin Sikira, an ambitious front end developer on an endless
-            learning journey.
-          </p>
-          <ResumeButton />
-        </h1>
-      </Reveal>
+      <h1>
+        <span>Hello There.</span>
+        <p>
+          I am Edin Sikira, an ambitious front end developer on an endless
+          learning journey.
+        </p>
+        <ResumeButton />
+      </h1>
       <div className="image">
         <img
           src={bannerImage}

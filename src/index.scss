@@ -482,6 +482,11 @@ section {
         transform: scale(1.1);
       }
     }
+    article {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
     .image {
       min-height: 200px;
       height: 200px;
