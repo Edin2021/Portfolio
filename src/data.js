@@ -1,6 +1,5 @@
 import audiophile from "./images/project/audiophile.png";
 import superchat from "./images/project/superchat.png";
-import trillowRealEstate from "./images/project/trillow.png";
 import digitalDesign from "./images/project/digital-design.png";
 import weatherApp from "./images/project/weather-app.png";
 import limesharp from "./images/logos/limesharp.svg";
@@ -31,16 +30,6 @@ const projects = [
   },
   {
     id: "3",
-    image: trillowRealEstate,
-    techUsed: "Sass / Javascript / ReacjJS / API",
-    name: "trillow real estate",
-    info: "Users can search for homes and rentals based on the state and city, and other parameters, view individual listings, and more.",
-    repo: "https://github.com/Edin2021/trillow-real-estate",
-    demo: "https://trillow-real-estate.pages.dev/",
-    selected: false,
-  },
-  {
-    id: "4",
     image: digitalDesign,
     techUsed: "Sass / Javascript / ReacjJS",
     name: "digital design",
@@ -50,7 +39,7 @@ const projects = [
     selected: true,
   },
   {
-    id: "5",
+    id: "4",
     image: weatherApp,
     techUsed: "Sass / Javascript / ReacjJS / API",
     name: "Weather App",
@@ -127,7 +116,7 @@ const sections = {
         {
           person: "Amer Sikira",
           role: "CEO of Generazia",
-          text: "Edin is an enthusiastic and dedicated Front End Developer who stood out with his ability to grasp concepts quickly and work independently on projects. He consistently delivered his work on time. Brought energy to the small tech company where he interned. However due, to prospects for advancement and salary restrictions it was mutually decided that it would be best for him to seek opportunities. He left a lasting and favourable impression, as an exceptional employee. ",
+          text: "Edin, a dedicated developer, excelled in grasping concepts, working independently, and meeting deadlines. His energy positively impacted the small tech company. Due to limited advancement opportunities and salary constraints, he decided to seek new opportunities, leaving a lasting, exceptional impression.",
         },
       ],
     },
