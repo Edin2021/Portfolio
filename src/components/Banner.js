@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import bannerImage from "../images/illustarions/guy-waving.svg";
 import bannerImageDark from "../images/illustarions/guy-waving-dark.svg";
 import ResumeButton from "./ResumeButton";

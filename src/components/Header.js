@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from "react";
 import { useGlobalContext } from "../context";
 import logo from "../images/logos/logo.svg";
