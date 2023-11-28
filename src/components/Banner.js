@@ -2,7 +2,6 @@
 import bannerImage from "../images/illustarions/guy-waving.svg";
 import bannerImageDark from "../images/illustarions/guy-waving-dark.svg";
 import ResumeButton from "./ResumeButton";
-import { Reveal } from "./Reveal";
 
 function Banner() {
   return (
