@@ -1,14 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from "react";
 import { projects } from "../data";
 import Project from "./Project";
 
 function SelectedProjects() {
-  const [selectedProjects, setSelectedProjects] = useState([]);
-
-  useEffect(() => {
-    setSelectedProjects(projects.filter((project) => project.selected));
-  }, []);
 
   return (
     <section>
